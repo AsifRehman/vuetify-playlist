@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jkjlkj</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+      <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+      <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <table border="1" cellpadding="3" id="printTable">
+    <tbody><tr>
+        <th>First Name</th>
+        <th>Last Name</th>      
+        <th>Points</th>
+    </tr>
+    <tr>
+        <td>Jill</td>
+        <td>Smith</td>      
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>        
+        <td>94</td>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>        
+        <td>80</td>
+    </tr>
+    <tr>
+        <td>Adam</td>
+        <td>Johnson</td>        
+        <td>67</td>
+    </tr>
+</tbody></table>
+
+<br />
+<br />
+
+<button>Print me</button>
+
+
+<script type="text/javascript">
+    function printData()
+{
+   var divToPrint=document.getElementById("printTable");
+   newWin= window.open("");
+   newWin.document.write(divToPrint.outerHTML);
+   newWin.print();
+   newWin.close();
+}
+
+$('button').on('click',function(){
+printData();
+})
+</script>
+
+</body>
+</html>
+
